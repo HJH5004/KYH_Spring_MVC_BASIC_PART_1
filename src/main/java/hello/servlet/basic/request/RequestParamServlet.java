@@ -30,7 +30,8 @@ public class RequestParamServlet extends HttpServlet {
 
 
         System.out.println("단일 파라티머 조회 staRT");
-        String userName = req.getParameter("userName");
+        //이 방식은 get 뿐만 아니라 post에서도 사용할 수 있다.
+        String userName = req.getParameter("username");
         String age  = req.getParameter("age");
 
         System.out.println("userName = " + userName);
@@ -41,7 +42,7 @@ public class RequestParamServlet extends HttpServlet {
 
 
         System.out.println("이름이 같은 복수 파라미터 조회");
-        String[] userNames = req.getParameterValues("userName");
+        String[] userNames = req.getParameterValues("username");
         for(String name : userNames){
             System.out.println("name = " + name);
         }
