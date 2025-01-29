@@ -77,6 +77,10 @@ public class FrontControllerServletV5 extends HttpServlet {
 
         /**
          * 그럼 다르게 이번엔 V4 Controller가 메인인 솔루션에 v3를 사용하고 싶은 상황
+         *
+         * 여기서 만약에 다른 interface의 controller 타입을 넣고싶어? -> return이 아예 다른 모델이거나 필요한 파라미터가 다른 controller
+         *
+         * = 상관 없다. 이 메인 로직에서 요구하는 값인 viewPath만 리턴되고 model은 controller에서 전잘해주는 model에 넣고 비즈니스 로직만 잘 돌리면 된다.
          * */
         Object handler = getHandler(request);
 
